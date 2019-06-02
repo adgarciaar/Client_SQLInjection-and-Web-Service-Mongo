@@ -1,0 +1,11 @@
+create or replace PACKAGE BODY LOGINSQLINJECTION AS
+
+  PROCEDURE ingresar(usuario IN VARCHAR2, pass IN VARCHAR2, retorno OUT NUMBER) AS
+        vsql VARCHAR2(4000);
+  BEGIN
+        vsql := 'SELECT COUNT(*) FROM usuario WHERE username =''' || usuario || ''' AND pwd = ''' || pass || ''' ';
+        DBMS_OUTPUT.PUT_LINE(vsql);
+        EXECUTE IMMEDIATE vsql INTO retorno;
+  END ingresar;
+
+END LOGINSQLINJECTION;

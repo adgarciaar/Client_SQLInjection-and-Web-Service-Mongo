@@ -1,0 +1,9 @@
+create or replace PACKAGE CONSULTASSQLEXTENDIDO AS 
+
+  PROCEDURE totalesHemisferioContinente (cursor_ OUT SYS_REFCURSOR);
+  PROCEDURE totalesHemisferioAnio (cursor_ OUT SYS_REFCURSOR);
+  PROCEDURE participacionContinente (cursor_ OUT SYS_REFCURSOR);
+  PROCEDURE rankingContinentes (cursor_ OUT SYS_REFCURSOR);
+  PROCEDURE totalesPivot (cursor_ OUT SYS_REFCURSOR);
+
+END CONSULTASSQLEXTENDIDO;
